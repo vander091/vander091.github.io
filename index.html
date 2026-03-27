@@ -1,142 +1,186 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Van Arcenas | Customer Support Specialist</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #0f172a;
-            color: #e2e8f0;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-        h1 {
-            font-size: 40px;
-            margin-bottom: 5px;
-        }
-        h2 {
-            margin-top: 40px;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 5px;
-        }
-        p {
-            color: #cbd5f5;
-        }
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-        .skills span {
-            display: inline-block;
-            background: #334155;
-            padding: 8px 12px;
-            border-radius: 6px;
-            margin: 5px;
-            font-size: 14px;
-        }
-        .highlight {
-            color: #38bdf8;
-            font-weight: bold;
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Van Arcenas</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b0f19;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+.btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 20px;
+    background: #3b82f6;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 10%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111827;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #1f2937;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.stat h3 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.stat p {
+    color: #94a3b8;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- HERO -->
+<div class="hero">
+    <h1>Van Arcenas</h1>
+    <p>Customer Support & Technical Support Specialist</p>
 
-<h1>Van Arcenas</h1>
-<p>Customer Support & Technical Support Specialist</p>
+    <div class="stats">
+        <div class="stat">
+            <h3>10+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat">
+            <h3>95%</h3>
+            <p>CSAT</p>
+        </div>
+        <div class="stat">
+            <h3>20%</h3>
+            <p>Faster Response</p>
+        </div>
+    </div>
 
-<div class="card">
-<p><span class="highlight">10+ years experience</span> handling chat and email support, technical concerns, and sales. Proven ability to manage high-volume tickets, maintain <span class="highlight">95% customer satisfaction</span>, and improve response efficiency.</p>
+    <a href="#experience" class="btn">View Experience</a>
 </div>
 
-<h2>Skills</h2>
-<div class="skills">
-<span>Chat Support</span>
-<span>Email Support</span>
-<span>Technical Support</span>
-<span>Sales</span>
-<span>Problem Solving</span>
-<span>CRM Tools</span>
-<span>Multitasking</span>
-<span>Process Improvement</span>
+<!-- EXPERIENCE -->
+<div class="section" id="experience">
+    <h2>Experience</h2>
+
+    <div class="grid">
+        <div class="card">
+            <b>Amazon Tracker</b><br>
+            Chat & Email Support<br><br>
+            Managed high-volume tickets and improved response time by 20%.
+        </div>
+
+        <div class="card">
+            <b>Indestructible Shoes</b><br>
+            Customer Support<br><br>
+            Assisted customers with orders, sizing, and retention.
+        </div>
+
+        <div class="card">
+            <b>Ghostek</b><br>
+            Email Support<br><br>
+            Resolved product, order, and technical issues efficiently.
+        </div>
+
+        <div class="card">
+            <b>The Better Future</b><br>
+            Sales Representative<br><br>
+            Exceeded sales targets by 15% and built strong client relationships.
+        </div>
+    </div>
 </div>
 
-<h2>Experience</h2>
+<!-- SKILLS -->
+<div class="section">
+    <h2>Skills</h2>
 
-<div class="card">
-<b>Amazon Tracker</b><br>
-Customer Support (2015–2018)<br><br>
-• Managed high-volume chat and email support<br>
-• Maintained 95% customer satisfaction rate<br>
-• Reduced response time by 20% through process improvements
+    <div class="grid">
+        <div class="card">Chat & Email Support</div>
+        <div class="card">Technical Support</div>
+        <div class="card">Sales</div>
+        <div class="card">Problem Solving</div>
+        <div class="card">CRM Tools</div>
+        <div class="card">Multitasking</div>
+    </div>
 </div>
 
-<div class="card">
-<b>Indestructible Shoes</b><br>
-Customer Support (2018–2021)<br><br>
-• Assisted customers with orders, sizing, and tracking<br>
-• Improved customer experience and repeat purchases<br>
-• Consistently exceeded engagement KPIs
+<!-- SAMPLE -->
+<div class="section">
+    <h2>Sample Work</h2>
+
+    <div class="card">
+        <b>Refund Handling</b><br><br>
+        Clear, fast resolution with proper expectations and reassurance.
+    </div>
+
+    <div class="card">
+        <b>De-escalation</b><br><br>
+        Calm tone, ownership, and immediate action to resolve issues.
+    </div>
 </div>
 
-<div class="card">
-<b>Ghostek</b><br>
-Email Support (2020–2023)<br><br>
-• Handled high-volume email support for eCommerce<br>
-• Resolved product, order, and technical issues<br>
-• Helped improve retention and customer satisfaction
-</div>
-
-<div class="card">
-<b>The Better Future</b><br>
-Sales Representative (2023–2025)<br><br>
-• Exceeded sales targets by 15%<br>
-• Built strong client relationships<br>
-• Contributed to lead generation strategies
-</div>
-
-<h2>Why Hire Me</h2>
-
-<div class="card">
-• Fast and efficient in handling large ticket volumes<br>
-• Strong communication and problem-solving skills<br>
-• Experienced in eCommerce, tech support, and sales<br>
-• Focused on customer satisfaction and retention
-</div>
-
-<h2>Sample Work</h2>
-
-<div class="card">
-<b>Refund Request</b><br><br>
-Hi [Customer Name],<br><br>
-Thanks for reaching out. I've reviewed your case and processed your refund. It should reflect within 3–5 business days depending on your bank.<br><br>
-Let me know if there's anything else I can assist you with.
-</div>
-
-<div class="card">
-<b>Handling an Angry Customer</b><br><br>
-Hi [Customer Name],<br><br>
-I understand how frustrating this situation is, and I sincerely apologize. I’ve taken ownership of your case and escalated this for priority resolution. I’ll personally monitor this until it’s fully resolved.
-</div>
-
-<h2>Contact</h2>
-
-<div class="card">
-Email: arcenasv@gmail.com<br>
-Phone: +63 991 907 4258<br>
-Location: Bacolod City, Philippines
-</div>
-
+<!-- FOOTER -->
+<div class="footer">
+    arcenasv@gmail.com • Bacolod City • +63 991 907 4258
 </div>
 
 </body>
