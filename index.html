@@ -1,149 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Van Der Knight Arcenas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Van Der Knight Arcenas</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0b0f19;
-    color: white;
-}
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-/* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
-}
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-.hero h1 {
-    font-size: 55px;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 20px;
-    color: #94a3b8;
-}
-
-.btn {
-    margin-top: 15px;
-    display: inline-block;
-    padding: 12px 20px;
-    background: #3b82f6;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-}
-
-/* SECTION */
-.section {
-    padding: 80px 10%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #111827;
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    background: #1f2937;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-/* CONTACT FORM */
-form {
-    max-width: 500px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 6px;
-    border: none;
-    background: #1f2937;
-    color: white;
-}
-
-button {
-    margin-top: 15px;
-    padding: 12px;
-    width: 100%;
-    background: #3b82f6;
-    border: none;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.footer {
-    text-align: center;
-    padding: 40px;
-    color: #64748b;
-}
-</style>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-slate-950 text-white">
+
+<!-- NAV -->
+<header class="flex justify-between items-center px-6 md:px-16 py-5 border-b border-slate-800">
+  <h1 class="text-lg font-semibold">Van Der Knight</h1>
+  <nav class="hidden md:flex space-x-6 text-slate-400">
+    <a href="#about" class="hover:text-white">About</a>
+    <a href="#projects" class="hover:text-white">Projects</a>
+    <a href="#contact" class="hover:text-white">Contact</a>
+  </nav>
+</header>
 
 <!-- HERO -->
-<div class="hero">
-    <h1>Van Der Knight Arcenas</h1>
-    <p>Customer Support & Technical Support Specialist</p>
+<section class="px-6 md:px-16 py-24 text-center md:text-left">
+  <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+    Customer Support<br>Specialist
+  </h2>
+  <p class="text-slate-400 mt-4 max-w-xl">
+    I help businesses retain customers, resolve issues fast, and deliver top-tier support experience.
+  </p>
+  <div class="mt-6">
+    <a href="#contact" class="bg-blue-500 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition">
+      Hire Me
+    </a>
+  </div>
+</section>
 
-    <a href="#contact" class="btn">Hire Me</a>
-    <a href="#contact" class="btn">Book a Call</a>
-</div>
+<!-- ABOUT -->
+<section id="about" class="px-6 md:px-16 py-20 border-t border-slate-800">
+  <h2 class="text-2xl font-semibold mb-6">About Me</h2>
+  <p class="text-slate-400 max-w-2xl">
+    I am a customer support specialist with experience in email and chat support, technical troubleshooting, and sales. 
+    I focus on fast resolution, customer satisfaction, and exceeding expectations.
+  </p>
+</section>
 
-<!-- EXPERIENCE -->
-<div class="section">
-    <h2>Experience</h2>
+<!-- SKILLS -->
+<section class="px-6 md:px-16 py-20 border-t border-slate-800">
+  <h2 class="text-2xl font-semibold mb-6">Skills</h2>
+  <div class="flex flex-wrap gap-3">
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">Customer Support</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">Email Support</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">Chat Support</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">Technical Support</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">Sales</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">Problem Solving</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">Multitasking</span>
+  </div>
+</section>
 
-    <div class="grid">
-        <div class="card">Amazon Tracker - Chat & Email Support</div>
-        <div class="card">Indestructible Shoes - Customer Support</div>
-        <div class="card">Ghostek - Email Support</div>
-        <div class="card">The Better Future - Sales Representative</div>
+<!-- PROJECTS -->
+<section id="projects" class="px-6 md:px-16 py-20 border-t border-slate-800">
+  <h2 class="text-2xl font-semibold mb-10">Projects</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-slate-900 p-6 rounded-xl hover:scale-105 transition">
+      <h3 class="font-semibold text-lg">Customer Support Optimization</h3>
+      <p class="text-slate-400 mt-2 text-sm">
+        Improved response time and customer satisfaction through structured workflows.
+      </p>
     </div>
-</div>
+
+    <div class="bg-slate-900 p-6 rounded-xl hover:scale-105 transition">
+      <h3 class="font-semibold text-lg">Email Handling System</h3>
+      <p class="text-slate-400 mt-2 text-sm">
+        Managed high-volume email queues with efficient prioritization.
+      </p>
+    </div>
+
+    <div class="bg-slate-900 p-6 rounded-xl hover:scale-105 transition">
+      <h3 class="font-semibold text-lg">Sales Conversion Support</h3>
+      <p class="text-slate-400 mt-2 text-sm">
+        Assisted in converting inquiries into successful sales through support.
+      </p>
+    </div>
+  </div>
+</section>
 
 <!-- CONTACT -->
-<div class="section" id="contact">
-    <h2>Contact Me</h2>
+<section id="contact" class="px-6 md:px-16 py-20 border-t border-slate-800">
+  <h2 class="text-2xl font-semibold mb-6">Contact Me</h2>
 
-    <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <!-- FORM -->
+    <form action="https://formspree.io/f/mayvlpzr" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required
+        class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700">
+
+      <input type="email" name="email" placeholder="Your Email" required
+        class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700">
+
+      <textarea name="message" rows="5" placeholder="Your Message" required
+        class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700"></textarea>
+
+      <button class="bg-green-500 w-full py-3 rounded-lg hover:bg-green-600 transition">
+        Send Message
+      </button>
     </form>
 
-    <br>
+    <!-- BOOKING -->
+    <div>
+      <h3 class="text-lg font-semibold">Book a Call</h3>
+      <p class="text-slate-400 mt-2">
+        Schedule a quick call with me to discuss opportunities.
+      </p>
+      <a href="https://calendly.com" target="_blank"
+        class="inline-block mt-4 bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transition">
+        Book Now
+      </a>
+    </div>
 
-    <a href="mailto:arcenasv@gmail.com" class="btn">Or Email Me Directly</a>
-</div>
+  </div>
+</section>
 
-<div class="footer">
-    arcenasv@gmail.com • Bacolod City • +63 991 907 4258
-</div>
+<!-- FOOTER -->
+<footer class="text-center py-8 text-slate-500 border-t border-slate-800">
+  © 2026 Van Der Knight Arcenas
+</footer>
 
 </body>
 </html>
