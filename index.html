@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Van Arcenas</title>
+<title>Van Der Knight Arcenas</title>
 
 <style>
 body {
@@ -22,7 +22,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 60px;
+    font-size: 55px;
     margin: 0;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .btn {
-    margin-top: 20px;
+    margin-top: 15px;
     display: inline-block;
     padding: 12px 20px;
     background: #3b82f6;
@@ -68,23 +68,32 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* STATS */
-.stats {
-    display: flex;
-    gap: 40px;
-    margin-top: 20px;
+/* CONTACT FORM */
+form {
+    max-width: 500px;
 }
 
-.stat h3 {
-    font-size: 28px;
-    margin: 0;
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #1f2937;
+    color: white;
 }
 
-.stat p {
-    color: #94a3b8;
+button {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    background: #3b82f6;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-/* FOOTER */
 .footer {
     text-align: center;
     padding: 40px;
@@ -97,88 +106,41 @@ h2 {
 
 <!-- HERO -->
 <div class="hero">
-    <h1>Van Arcenas</h1>
+    <h1>Van Der Knight Arcenas</h1>
     <p>Customer Support & Technical Support Specialist</p>
 
-    <div class="stats">
-        <div class="stat">
-            <h3>10+</h3>
-            <p>Years Experience</p>
-        </div>
-        <div class="stat">
-            <h3>95%</h3>
-            <p>CSAT</p>
-        </div>
-        <div class="stat">
-            <h3>20%</h3>
-            <p>Faster Response</p>
-        </div>
-    </div>
-
-    <a href="#experience" class="btn">View Experience</a>
+    <a href="#contact" class="btn">Hire Me</a>
+    <a href="#contact" class="btn">Book a Call</a>
 </div>
 
 <!-- EXPERIENCE -->
-<div class="section" id="experience">
+<div class="section">
     <h2>Experience</h2>
 
     <div class="grid">
-        <div class="card">
-            <b>Amazon Tracker</b><br>
-            Chat & Email Support<br><br>
-            Managed high-volume tickets and improved response time by 20%.
-        </div>
-
-        <div class="card">
-            <b>Indestructible Shoes</b><br>
-            Customer Support<br><br>
-            Assisted customers with orders, sizing, and retention.
-        </div>
-
-        <div class="card">
-            <b>Ghostek</b><br>
-            Email Support<br><br>
-            Resolved product, order, and technical issues efficiently.
-        </div>
-
-        <div class="card">
-            <b>The Better Future</b><br>
-            Sales Representative<br><br>
-            Exceeded sales targets by 15% and built strong client relationships.
-        </div>
+        <div class="card">Amazon Tracker - Chat & Email Support</div>
+        <div class="card">Indestructible Shoes - Customer Support</div>
+        <div class="card">Ghostek - Email Support</div>
+        <div class="card">The Better Future - Sales Representative</div>
     </div>
 </div>
 
-<!-- SKILLS -->
-<div class="section">
-    <h2>Skills</h2>
+<!-- CONTACT -->
+<div class="section" id="contact">
+    <h2>Contact Me</h2>
 
-    <div class="grid">
-        <div class="card">Chat & Email Support</div>
-        <div class="card">Technical Support</div>
-        <div class="card">Sales</div>
-        <div class="card">Problem Solving</div>
-        <div class="card">CRM Tools</div>
-        <div class="card">Multitasking</div>
-    </div>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <br>
+
+    <a href="mailto:arcenasv@gmail.com" class="btn">Or Email Me Directly</a>
 </div>
 
-<!-- SAMPLE -->
-<div class="section">
-    <h2>Sample Work</h2>
-
-    <div class="card">
-        <b>Refund Handling</b><br><br>
-        Clear, fast resolution with proper expectations and reassurance.
-    </div>
-
-    <div class="card">
-        <b>De-escalation</b><br><br>
-        Calm tone, ownership, and immediate action to resolve issues.
-    </div>
-</div>
-
-<!-- FOOTER -->
 <div class="footer">
     arcenasv@gmail.com • Bacolod City • +63 991 907 4258
 </div>
