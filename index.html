@@ -5,66 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Van Der Knight Arcenas</title>
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
+    body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
 
 <body class="bg-slate-950 text-white">
 
 <!-- NAV -->
-<header class="flex justify-between items-center px-6 md:px-16 py-5 border-b border-slate-800">
-  <h1 class="text-lg font-semibold">Van Der Knight</h1>
-  <nav class="hidden md:flex space-x-6 text-slate-400">
+<header class="flex justify-between items-center px-6 md:px-16 py-5 border-b border-slate-800 sticky top-0 bg-slate-950 z-50">
+  <h1 class="font-semibold">Van Der Knight Arcenas</h1>
+  <nav class="hidden md:flex gap-6 text-slate-400">
     <a href="#about" class="hover:text-white">About</a>
+    <a href="#tech" class="hover:text-white">Tech</a>
     <a href="#projects" class="hover:text-white">Projects</a>
     <a href="#contact" class="hover:text-white">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section class="px-6 md:px-16 py-24 text-center md:text-left">
-  <h2 class="text-4xl md:text-6xl font-bold leading-tight">
-    Customer Support<br>Specialist
-  </h2>
-  <p class="text-slate-400 mt-4 max-w-xl">
-    I help businesses retain customers, resolve issues fast, and deliver top-tier support experience.
-  </p>
-  <div class="mt-6">
-    <a href="#contact" class="bg-blue-500 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition">
+<section class="px-6 md:px-16 py-24 flex flex-col md:flex-row items-center gap-10">
+
+  <img src="profile.jpg" alt="Van Der Knight"
+       class="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-slate-700 shadow-lg">
+
+  <div>
+    <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+      Van Der Knight Arcenas
+    </h2>
+    <p class="text-slate-400 mt-4 max-w-xl">
+      Customer Support Specialist focused on fast resolution, technical troubleshooting, and delivering top-tier customer experience.
+    </p>
+
+    <a href="#contact"
+       class="inline-block mt-6 bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transition">
       Hire Me
     </a>
   </div>
+
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="px-6 md:px-16 py-20 border-t border-slate-800">
   <h2 class="text-2xl font-semibold mb-6">About Me</h2>
   <p class="text-slate-400 max-w-2xl">
-    I am a customer support specialist with experience in email and chat support, technical troubleshooting, and sales. 
-    I focus on fast resolution, customer satisfaction, and exceeding expectations.
+    I specialize in customer support, email handling, and technical troubleshooting.
+    I help businesses improve customer satisfaction, reduce response time, and maintain high-quality service.
   </p>
 </section>
 
-<!-- SKILLS -->
-<section class="px-6 md:px-16 py-20 border-t border-slate-800">
-  <h2 class="text-2xl font-semibold mb-6">Skills</h2>
+<!-- TECH STACK -->
+<section id="tech" class="px-6 md:px-16 py-20 border-t border-slate-800">
+  <h2 class="text-2xl font-semibold mb-6">Tech Stack</h2>
+
   <div class="flex flex-wrap gap-3">
-    <span class="bg-slate-800 px-4 py-2 rounded-lg">Customer Support</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">HTML</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">CSS</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">Tailwind</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">JavaScript</span>
+    <span class="bg-slate-800 px-4 py-2 rounded-lg">Shopify</span>
     <span class="bg-slate-800 px-4 py-2 rounded-lg">Email Support</span>
-    <span class="bg-slate-800 px-4 py-2 rounded-lg">Chat Support</span>
     <span class="bg-slate-800 px-4 py-2 rounded-lg">Technical Support</span>
-    <span class="bg-slate-800 px-4 py-2 rounded-lg">Sales</span>
-    <span class="bg-slate-800 px-4 py-2 rounded-lg">Problem Solving</span>
-    <span class="bg-slate-800 px-4 py-2 rounded-lg">Multitasking</span>
   </div>
 </section>
 
@@ -73,26 +78,37 @@
   <h2 class="text-2xl font-semibold mb-10">Projects</h2>
 
   <div class="grid md:grid-cols-3 gap-6">
-    <div class="bg-slate-900 p-6 rounded-xl hover:scale-105 transition">
-      <h3 class="font-semibold text-lg">Customer Support Optimization</h3>
-      <p class="text-slate-400 mt-2 text-sm">
-        Improved response time and customer satisfaction through structured workflows.
-      </p>
+
+    <div class="bg-slate-900 rounded-xl overflow-hidden hover:scale-105 transition">
+      <img src="https://via.placeholder.com/400x200" class="w-full">
+      <div class="p-5">
+        <h3 class="font-semibold text-lg">Support Workflow Optimization</h3>
+        <p class="text-slate-400 text-sm mt-2">
+          Improved response efficiency and reduced ticket backlog.
+        </p>
+      </div>
     </div>
 
-    <div class="bg-slate-900 p-6 rounded-xl hover:scale-105 transition">
-      <h3 class="font-semibold text-lg">Email Handling System</h3>
-      <p class="text-slate-400 mt-2 text-sm">
-        Managed high-volume email queues with efficient prioritization.
-      </p>
+    <div class="bg-slate-900 rounded-xl overflow-hidden hover:scale-105 transition">
+      <img src="https://via.placeholder.com/400x200" class="w-full">
+      <div class="p-5">
+        <h3 class="font-semibold text-lg">Email Queue Management</h3>
+        <p class="text-slate-400 text-sm mt-2">
+          Managed high-volume support emails with prioritization system.
+        </p>
+      </div>
     </div>
 
-    <div class="bg-slate-900 p-6 rounded-xl hover:scale-105 transition">
-      <h3 class="font-semibold text-lg">Sales Conversion Support</h3>
-      <p class="text-slate-400 mt-2 text-sm">
-        Assisted in converting inquiries into successful sales through support.
-      </p>
+    <div class="bg-slate-900 rounded-xl overflow-hidden hover:scale-105 transition">
+      <img src="https://via.placeholder.com/400x200" class="w-full">
+      <div class="p-5">
+        <h3 class="font-semibold text-lg">Customer Retention Support</h3>
+        <p class="text-slate-400 text-sm mt-2">
+          Helped improve customer retention through quality service.
+        </p>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -102,15 +118,14 @@
 
   <div class="grid md:grid-cols-2 gap-10">
 
-    <!-- FORM -->
-    <form action="https://formspree.io/f/mayvlpzr" method="POST" class="space-y-4">
-      <input type="text" name="name" placeholder="Your Name" required
+    <form id="contactForm" class="space-y-4">
+      <input type="text" placeholder="Your Name" required
         class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700">
 
-      <input type="email" name="email" placeholder="Your Email" required
+      <input type="email" placeholder="Your Email" required
         class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700">
 
-      <textarea name="message" rows="5" placeholder="Your Message" required
+      <textarea rows="5" placeholder="Your Message" required
         class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700"></textarea>
 
       <button class="bg-green-500 w-full py-3 rounded-lg hover:bg-green-600 transition">
@@ -118,12 +133,12 @@
       </button>
     </form>
 
-    <!-- BOOKING -->
     <div>
       <h3 class="text-lg font-semibold">Book a Call</h3>
       <p class="text-slate-400 mt-2">
-        Schedule a quick call with me to discuss opportunities.
+        Schedule a call to discuss opportunities.
       </p>
+
       <a href="https://calendly.com" target="_blank"
         class="inline-block mt-4 bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transition">
         Book Now
@@ -137,6 +152,14 @@
 <footer class="text-center py-8 text-slate-500 border-t border-slate-800">
   © 2026 Van Der Knight Arcenas
 </footer>
+
+<!-- JS -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Message sent! (Connect Formspree to make it real)");
+});
+</script>
 
 </body>
 </html>
