@@ -7,7 +7,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
-    body { background: radial-gradient(circle at top, #0f172a, #000); }
+    body {
+  background: url('background.jpg') no-repeat center center/cover;
+}
     .glass { backdrop-filter: blur(12px); background: rgba(15,15,15,0.6); }
     .reveal { opacity: 0; transform: translateY(50px); transition: all 0.9s ease; }
     .reveal.active { opacity: 1; transform: translateY(0); }
