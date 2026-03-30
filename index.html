@@ -1,83 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Van | Elite Support & VA Specialist</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Van | Elite Support Specialist</title>
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    html { scroll-behavior: smooth; }
+<style>
+html { scroll-behavior: smooth; }
 
-    /* ✅ BACKGROUND IMAGE */
-    body {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
-                  url('./background.jpg') no-repeat center center/cover;
-    }
+body {
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.9)),
+              url('./background.jpg') no-repeat center center/cover;
+}
 
-    .glass { backdrop-filter: blur(12px); background: rgba(15,15,15,0.6); }
+/* glass effect */
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(15,15,15,0.6);
+}
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.9s ease;
-    }
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .glow:hover {
-      box-shadow: 0 0 20px rgba(59,130,246,0.6);
-    }
-  </style>
+/* glow */
+.glow:hover {
+  box-shadow: 0 0 20px rgba(59,130,246,0.6);
+}
+</style>
 </head>
 
 <body class="text-white font-sans">
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <header class="fixed top-0 w-full z-50 glass border-b border-gray-800">
   <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-    <h1 class="font-bold text-lg tracking-wide">Van</h1>
+    <h1 class="font-bold">Van</h1>
     <nav class="flex gap-6 text-sm">
-      <a href="#about" class="hover:text-blue-400 transition">About</a>
-      <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-      <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+      <a href="#about" class="hover:text-blue-400">About</a>
+      <a href="#skills" class="hover:text-blue-400">Skills</a>
+      <a href="#contact" class="hover:text-blue-400">Contact</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 pt-24 gap-10">
+<section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 pt-24 gap-12">
 
-  <!-- LEFT: PROFILE PHOTO -->
   <div class="flex-1 flex justify-center">
-    <img src="./portfolio.jpg" alt="Van"
-     class="w-72 h-72 object-cover rounded-2xl shadow-xl border border-gray-800 hover:scale-105 transition duration-300">
+    <img src="./profile.jpg"
+      class="w-72 h-72 object-cover rounded-2xl border border-gray-700 shadow-xl hover:scale-105 transition duration-300">
   </div>
 
-  <!-- RIGHT: TEXT -->
   <div class="flex-1 text-center md:text-left">
     <h1 class="text-5xl md:text-7xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text">
-      Elite Support & VA Specialist
+      Elite Support Specialist
     </h1>
 
-    <p class="max-w-xl text-gray-300 mb-8 text-lg">
-      10+ years helping businesses scale through reliable support, admin precision, and efficient operations.
+    <p class="text-gray-300 max-w-xl mb-8">
+      10+ years helping businesses scale through fast, reliable support, clean operations, and customer-first execution.
     </p>
 
     <div class="flex gap-4 justify-center md:justify-start">
-      <a href="#contact" class="bg-blue-500 px-8 py-3 rounded-xl glow hover:bg-blue-600 transition">Hire Me</a>
-      <a href="/resume.pdf" download class="border border-gray-600 px-8 py-3 rounded-xl hover:bg-gray-800 transition">Download Resume</a>
+      <a href="#contact" class="bg-blue-500 px-8 py-3 rounded-xl glow hover:bg-blue-600">Hire Me</a>
+      <a href="/resume.pdf" class="border border-gray-600 px-8 py-3 rounded-xl hover:bg-gray-800">Resume</a>
     </div>
   </div>
 
 </section>
 
+<!-- ABOUT -->
+<section id="about" class="px-6 md:px-16 py-24 border-t border-gray-800 reveal">
+  <h2 class="text-3xl font-semibold mb-6">About Me</h2>
+  <p class="text-gray-300 max-w-3xl">
+    I specialize in customer support and virtual assistance with over a decade of experience.
+    I help businesses stay organized, resolve customer issues efficiently, and maintain high satisfaction levels.
+    My approach is simple: fast response, clear communication, and results that actually matter.
+  </p>
+</section>
+
+<!-- RESULTS -->
+<section class="px-6 md:px-16 py-24 border-t border-gray-800 reveal">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div>
+      <h3 class="text-3xl font-bold text-blue-400">10+</h3>
+      <p class="text-gray-400">Years Experience</p>
+    </div>
+    <div>
+      <h3 class="text-3xl font-bold text-blue-400">1000+</h3>
+      <p class="text-gray-400">Customers Helped</p>
+    </div>
+    <div>
+      <h3 class="text-3xl font-bold text-blue-400">99%</h3>
+      <p class="text-gray-400">Satisfaction</p>
+    </div>
+    <div>
+      <h3 class="text-3xl font-bold text-blue-400">Fast</h3>
+      <p class="text-gray-400">Response Time</p>
+    </div>
+  </div>
+</section>
+
 <!-- SKILLS -->
 <section id="skills" class="px-6 md:px-16 py-24 border-t border-gray-800 reveal">
   <h2 class="text-3xl font-semibold mb-8">Core Skills</h2>
+
   <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div class="bg-gray-900 p-4 rounded-xl text-center glow">Customer Support</div>
     <div class="bg-gray-900 p-4 rounded-xl text-center glow">Email Support</div>
@@ -89,24 +124,42 @@
   </div>
 </section>
 
+<!-- TOOLS -->
+<section class="px-6 md:px-16 py-24 border-t border-gray-800 reveal">
+  <h2 class="text-3xl font-semibold mb-6">Tools</h2>
+
+  <div class="flex flex-wrap gap-4 text-gray-300">
+    <span class="bg-gray-900 px-4 py-2 rounded-lg">Zendesk</span>
+    <span class="bg-gray-900 px-4 py-2 rounded-lg">Shopify</span>
+    <span class="bg-gray-900 px-4 py-2 rounded-lg">Gmail</span>
+    <span class="bg-gray-900 px-4 py-2 rounded-lg">Slack</span>
+    <span class="bg-gray-900 px-4 py-2 rounded-lg">Microsoft Office</span>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="px-6 md:px-16 py-24 border-t border-gray-800 text-center reveal">
-  <h2 class="text-3xl font-semibold mb-6">Let’s Work Together</h2>
-  <p class="text-gray-400 mb-8">Ready to support your business and make operations smoother.</p>
-  <a href="mailto:your@email.com" class="bg-blue-500 px-8 py-3 rounded-xl glow hover:bg-blue-600 transition">Contact Me</a>
+  <h2 class="text-3xl font-semibold mb-6">Let’s Work</h2>
+  <p class="text-gray-400 mb-8">Ready to support your business.</p>
+
+  <a href="mailto:your@email.com"
+     class="bg-blue-500 px-8 py-3 rounded-xl glow hover:bg-blue-600">
+     Contact Me
+  </a>
 </section>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - 100) {
-        el.classList.add('active');
-      }
-    });
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    const height = window.innerHeight;
+    if (top < height - 100) {
+      el.classList.add('active');
+    }
   });
+});
 </script>
 
 </body>
