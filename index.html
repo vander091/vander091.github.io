@@ -5,17 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Van | Elite Support & VA Specialist</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     html { scroll-behavior: smooth; }
+
+    /* ✅ FIXED BACKGROUND */
     body {
-  background: url('background.jpg') no-repeat center center/cover;
-}
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+                  url('./portfolio.jpg') no-repeat center center/cover;
+    }
+
     .glass { backdrop-filter: blur(12px); background: rgba(15,15,15,0.6); }
-    .reveal { opacity: 0; transform: translateY(50px); transition: all 0.9s ease; }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-    .glow:hover { box-shadow: 0 0 20px rgba(59,130,246,0.6); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.9s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .glow:hover {
+      box-shadow: 0 0 20px rgba(59,130,246,0.6);
+    }
   </style>
 </head>
+
 <body class="text-white font-sans">
 
 <!-- NAVBAR -->
@@ -36,7 +54,7 @@
   <!-- LEFT: PHOTO -->
   <div class="flex-1 flex justify-center">
     <img src="portfolio.jpg" alt="Van"
-         class="w-72 h-72 object-cover rounded-2xl shadow-xl border border-gray-800">
+         class="w-72 h-72 object-cover rounded-2xl shadow-xl border border-gray-800 hover:scale-105 transition duration-300">
   </div>
 
   <!-- RIGHT: TEXT -->
@@ -69,7 +87,7 @@
     <div class="bg-gray-900 p-4 rounded-xl text-center glow">Virtual Assistance</div>
     <div class="bg-gray-900 p-4 rounded-xl text-center glow">Admin Support</div>
     <div class="bg-gray-900 p-4 rounded-xl text-center glow">Data Entry</div>
-    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
