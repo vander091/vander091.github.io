@@ -1,213 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Van | Elite Customer Support & VA Specialist</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Van | Customer Support Specialist</title>
 
 <style>
-html { scroll-behavior: smooth; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
 body {
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.9)),
-              url('./background.jpg') no-repeat center center/cover;
+  background: url('background.jpg') no-repeat center center/cover;
+  color: white;
 }
 
-/* glass */
-.glass {
-  backdrop-filter: blur(12px);
-  background: rgba(15,15,15,0.6);
+.overlay {
+  background: rgba(0,0,0,0.75);
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
-/* reveal */
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.hero img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+}
+
+.hero-text p {
+  margin: 10px 0;
+  opacity: 0.9;
+}
+
+/* STATS */
+.stats {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* ANIMATION */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: all 0.6s ease;
 }
+
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* glow */
-.glow:hover {
-  box-shadow: 0 0 20px rgba(59,130,246,0.6);
+h2 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+ul {
+  line-height: 1.8;
+}
+
+/* BUTTON */
+button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
 }
 </style>
 </head>
 
-<body class="text-white font-sans">
+<body>
 
-<!-- NAV -->
-<header class="fixed top-0 w-full z-50 glass border-b border-gray-800">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-    <h1 class="font-bold">Van</h1>
-    <nav class="flex gap-6 text-sm">
-      <a href="#about" class="hover:text-blue-400">About</a>
-      <a href="#skills" class="hover:text-blue-400">Skills</a>
-      <a href="#contact" class="hover:text-blue-400">Contact</a>
-    </nav>
-  </div>
-</header>
+<div class="overlay">
 
-<!-- HERO -->
-<section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 pt-24 gap-12">
-
-  <div class="flex-1 flex justify-center">
-    <img src="./portfolio.jpg"
-      class="w-72 h-72 object-cover rounded-2xl border border-gray-700 shadow-xl hover:scale-105 transition duration-300">
+  <!-- HERO -->
+  <div class="hero reveal">
+    <img src="portfolio.jpg" alt="Van">
+    <div class="hero-text">
+      <h1>Van</h1>
+      <p>Customer Support Specialist | Email & Chat Support</p>
+      <div class="stats">
+        10+ Years Experience • 25+ Happy Clients • 99% Satisfaction
+      </div>
+    </div>
   </div>
 
-  <div class="flex-1 text-center md:text-left">
-    <h1 class="text-5xl md:text-7xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text">
-      Elite Customer Support & VA Specialist
-    </h1>
-
-    <p class="text-gray-300 max-w-xl mb-8">
-      10+ years helping businesses scale through fast, reliable support, clean operations, and customer-first execution.
+  <!-- ABOUT -->
+  <div class="section reveal">
+    <h2>About Me</h2>
+    <p>
+      I specialize in customer support, helping businesses deliver fast, reliable,
+      and professional responses through email and chat. My focus is resolving
+      issues efficiently while keeping customers satisfied and loyal.
     </p>
-
-    <div class="flex gap-4 justify-center md:justify-start">
-      <a href="#contact" class="bg-blue-500 px-8 py-3 rounded-xl glow hover:bg-blue-600">Hire Me</a>
-      <a href="Knight Resume.pdf" class="border border-gray-600 px-8 py-3 rounded-xl hover:bg-gray-800">Resume</a>
-    </div>
   </div>
 
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="px-6 md:px-16 py-24 border-t border-gray-800 reveal">
-  <h2 class="text-3xl font-semibold mb-6">About Me</h2>
-  <p class="text-gray-300 max-w-3xl">
-    I specialize in customer support and virtual assistance with over a decade of experience.
-    I help businesses stay organized, resolve customer issues efficiently, and maintain high satisfaction levels.
-    My approach is simple: fast response, clear communication, and results that actually matter.
-  </p>
-</section>
-
-<!-- RESULTS -->
-<section class="px-6 md:px-16 py-24 border-t border-gray-800 reveal">
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-    <div>
-      <h3 class="text-3xl font-bold text-blue-400">10+</h3>
-      <p class="text-gray-400">Years Experience</p>
-    </div>
-    <div>
-      <h3 class="text-3xl font-bold text-blue-400">1000+</h3>
-      <p class="text-gray-400">Customers Helped</p>
-    </div>
-    <div>
-      <h3 class="text-3xl font-bold text-blue-400">99%</h3>
-      <p class="text-gray-400">Satisfaction</p>
-    </div>
-    <div>
-      <h3 class="text-3xl font-bold text-blue-400">Fast</h3>
-      <p class="text-gray-400">Response Time</p>
-    </div>
+  <!-- SKILLS -->
+  <div class="section reveal">
+    <h2>Core Skills</h2>
+    <ul>
+      <li>Customer Support (Email & Chat)</li>
+      <li>Technical Support</li>
+      <li>Sales & Upselling</li>
+      <li>Multitasking & Problem Solving</li>
+      <li>CRM & Microsoft Tools</li>
+    </ul>
   </div>
-</section>
 
-<!-- SKILLS -->
-<section id="skills" class="px-6 md:px-16 py-24 border-t border-gray-800 reveal">
-  <h2 class="text-3xl font-semibold mb-8">Core Skills</h2>
-
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-    <div class="bg-gray-900 p-4 rounded-xl text-center glow">Customer Support</div>
-    <div class="bg-gray-900 p-4 rounded-xl text-center glow">Email Support</div>
-    <div class="bg-gray-900 p-4 rounded-xl text-center glow">Chat Support</div>
-    <div class="bg-gray-900 p-4 rounded-xl text-center glow">Technical Support</div>
-    <div class="bg-gray-900 p-4 rounded-xl text-center glow">Virtual Assistance</div>
-    <div class="bg-gray-900 p-4 rounded-xl text-center glow">Admin Support</div>
-    <div class="bg-gray-900 p-4 rounded-xl text-center glow">Data Entry</div>
+  <!-- EXPERIENCE -->
+  <div class="section reveal">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Nooro, Inc.</strong> – Sales Representative (2021–2024)</li>
+      <li><strong>Ghostek</strong> – Customer Support Representative</li>
+      <li><strong>BCS</strong> – Order Processing & Customer Support</li>
+    </ul>
   </div>
-</section>
 
-<!-- TOOLS -->
-<section class="px-6 md:px-16 py-24 border-t border-gray-800 reveal">
-  <h2 class="text-3xl font-semibold mb-6">Tools</h2>
-
-  <div class="flex flex-wrap gap-4 text-gray-300">
-    <span class="bg-gray-900 px-4 py-2 rounded-lg">Zendesk</span>
-    <span class="bg-gray-900 px-4 py-2 rounded-lg">Shopify</span>
-    <span class="bg-gray-900 px-4 py-2 rounded-lg">Gmail</span>
-    <span class="bg-gray-900 px-4 py-2 rounded-lg">Slack</span>
-    <span class="bg-gray-900 px-4 py-2 rounded-lg">Microsoft Office</span>
+  <!-- CONTACT -->
+  <div class="section reveal">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+    <button>Hire Me</button>
   </div>
-</section>
 
-<!-- TESTIMONIALS -->
-<section class="px-6 md:px-16 py-24 border-t border-gray-800 reveal">
-  <h2 class="text-3xl font-semibold mb-10">What Clients Say</h2>
+</div>
 
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="glass p-6 rounded-xl">
-      <p class="text-gray-300 mb-4">
-        "Van handled our support flawlessly. Fast, reliable, and very professional."
-      </p>
-      <h4 class="text-sm text-gray-400">— E-commerce Client</h4>
-    </div>
-
-    <div class="glass p-6 rounded-xl">
-      <p class="text-gray-300 mb-4">
-        "Response times improved instantly after working with him."
-      </p>
-      <h4 class="text-sm text-gray-400">— SaaS Business Owner</h4>
-    </div>
-
-    <div class="glass p-6 rounded-xl">
-      <p class="text-gray-300 mb-4">
-        "Highly dependable VA. Handles tasks without constant supervision."
-      </p>
-      <h4 class="text-sm text-gray-400">— Agency Client</h4>
-    </div>
-  </div>
-</section>
-
-<!-- COMPANIES -->
-<section class="px-6 md:px-16 py-24 border-t border-gray-800 text-center reveal">
-  <h2 class="text-3xl font-semibold mb-4">Companies I've Worked With</h2>
-
-  <p class="text-gray-400 mb-10">
-    8+ years experience supporting global e-commerce and tech clients
-  </p>
-
-  <div class="flex flex-wrap justify-center gap-6 text-gray-300">
-    <span class="bg-gray-900 px-6 py-3 rounded-lg">Amazon Tracker</span>
-    <span class="bg-gray-900 px-6 py-3 rounded-lg">Indestructible Shoes</span>
-    <span class="bg-gray-900 px-6 py-3 rounded-lg">Ghostek</span>
-    <span class="bg-gray-900 px-6 py-3 rounded-lg">The Better Future</span>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="px-6 md:px-16 py-24 border-t border-gray-800 text-center reveal">
-  <h2 class="text-3xl font-semibold mb-6">Let’s Work</h2>
-  <p class="text-gray-400 mb-8">Ready to support your business.</p>
-
-  <a href="mailto:arcenasv@gmail.com"
-     class="bg-blue-500 px-8 py-3 rounded-xl glow hover:bg-blue-600">
-     Contact Me
-  </a>
-</section>
-
+<!-- FIXED SCRIPT (this is the key) -->
 <script>
 window.addEventListener('load', () => {
   const reveals = document.querySelectorAll('.reveal');
 
-  const activate = () => {
+  function show() {
     reveals.forEach(el => {
       const top = el.getBoundingClientRect().top;
-      const height = window.innerHeight;
-      if (top < height - 100) {
+      const windowHeight = window.innerHeight;
+
+      if (top < windowHeight - 100) {
         el.classList.add('active');
       }
     });
-  };
+  }
 
-  activate();
-  window.addEventListener('scroll', activate);
+  show();
+  window.addEventListener('scroll', show);
 });
 </script>
 
