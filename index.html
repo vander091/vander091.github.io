@@ -3,19 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Van | Elite Customer Support & VA Specialist </title>
+<title>Van | Elite Customer Support & VA Specialist</title>
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-
-  section {
-  animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
 html { scroll-behavior: smooth; }
 
 body {
@@ -23,16 +14,16 @@ body {
               url('./background.jpg') no-repeat center center/cover;
 }
 
-/* glass effect */
+/* glass */
 .glass {
   backdrop-filter: blur(12px);
   background: rgba(15,15,15,0.6);
 }
 
-/* reveal animation */
+/* reveal */
 .reveal {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(40px);
   transition: all 0.8s ease;
 }
 .reveal.active {
@@ -71,7 +62,7 @@ body {
 
   <div class="flex-1 text-center md:text-left">
     <h1 class="text-5xl md:text-7xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text">
-      Elite Support Specialist
+      Elite Customer Support & VA Specialist
     </h1>
 
     <p class="text-gray-300 max-w-xl mb-8">
@@ -80,7 +71,7 @@ body {
 
     <div class="flex gap-4 justify-center md:justify-start">
       <a href="#contact" class="bg-blue-500 px-8 py-3 rounded-xl glow hover:bg-blue-600">Hire Me</a>
-      <a href="/resume.pdf" class="border border-gray-600 px-8 py-3 rounded-xl hover:bg-gray-800">Resume</a>
+      <a href="Knight Resume.pdf" class="border border-gray-600 px-8 py-3 rounded-xl hover:bg-gray-800">Resume</a>
     </div>
   </div>
 
@@ -146,11 +137,11 @@ body {
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
 <section class="px-6 md:px-16 py-24 border-t border-gray-800 reveal">
   <h2 class="text-3xl font-semibold mb-10">What Clients Say</h2>
 
   <div class="grid md:grid-cols-3 gap-6">
-
     <div class="glass p-6 rounded-xl">
       <p class="text-gray-300 mb-4">
         "Van handled our support flawlessly. Fast, reliable, and very professional."
@@ -171,34 +162,11 @@ body {
       </p>
       <h4 class="text-sm text-gray-400">— Agency Client</h4>
     </div>
-
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="px-6 md:px-16 py-24 border-t border-gray-800 text-center reveal">
-  <h2 class="text-3xl font-semibold mb-6">Let’s Work</h2>
-  <p class="text-gray-400 mb-8">Ready to support your business.</p>
-
-  <a href="mailto:your@email.com"
-     class="bg-blue-500 px-8 py-3 rounded-xl glow hover:bg-blue-600">
-     Contact Me
-  </a>
-</section>
-const reveals = document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll', () => {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    const height = window.innerHeight;
-    if (top < height - 100) {
-      el.classList.add('active');
-    }
-  });
-});
-</script>
-
-  <section class="px-6 md:px-16 py-24 border-t border-gray-800 text-center reveal">
+<!-- COMPANIES -->
+<section class="px-6 md:px-16 py-24 border-t border-gray-800 text-center reveal">
   <h2 class="text-3xl font-semibold mb-4">Companies I've Worked With</h2>
 
   <p class="text-gray-400 mb-10">
@@ -212,8 +180,36 @@ window.addEventListener('scroll', () => {
     <span class="bg-gray-900 px-6 py-3 rounded-lg">The Better Future</span>
   </div>
 </section>
-<script>
 
+<!-- CONTACT -->
+<section id="contact" class="px-6 md:px-16 py-24 border-t border-gray-800 text-center reveal">
+  <h2 class="text-3xl font-semibold mb-6">Let’s Work</h2>
+  <p class="text-gray-400 mb-8">Ready to support your business.</p>
+
+  <a href="mailto:arcenasv@gmail.com"
+     class="bg-blue-500 px-8 py-3 rounded-xl glow hover:bg-blue-600">
+     Contact Me
+  </a>
+</section>
+
+<script>
+window.addEventListener('load', () => {
+  const reveals = document.querySelectorAll('.reveal');
+
+  const activate = () => {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      const height = window.innerHeight;
+      if (top < height - 100) {
+        el.classList.add('active');
+      }
+    });
+  };
+
+  activate();
+  window.addEventListener('scroll', activate);
+});
+</script>
 
 </body>
 </html>
