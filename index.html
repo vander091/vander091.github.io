@@ -265,7 +265,10 @@ let started = false;
 function runCounters() {
   if (started) return;
 
-  const trigger = document.querySelector('.counter').getBoundingClientRect().top;
+  const firstCounter = document.querySelector('.counter');
+  if (!firstCounter) return; // جلوگیری crash
+
+  const trigger = firstCounter.getBoundingClientRect().top;
   const screenHeight = window.innerHeight;
 
   if (trigger < screenHeight - 100) {
