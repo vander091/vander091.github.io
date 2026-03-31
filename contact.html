@@ -22,22 +22,30 @@ body {
 
   <form action="https://formsubmit.co/arcenasv@gmail.com" method="POST" class="space-y-4">
 
-  <!-- FORCE redirect -->
-  <input type="hidden" name="_next" value="https://vandero91.github.io/thankyou.html">
-  <input type="hidden" name="_redirect" value="https://vandero91.github.io/thankyou.html">
+    <!-- ✅ CORRECT URL (fixed username) -->
+    <input type="hidden" name="_next" value="https://vander091.github.io/thankyou.html">
+    <input type="hidden" name="_redirect" value="https://vander091.github.io/thankyou.html">
 
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="New Client Inquiry from Portfolio">
-  <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Client Inquiry from Portfolio">
+    <input type="hidden" name="_template" value="table">
 
-  <!-- fields -->
-  <input type="text" name="name" required placeholder="Your Name">
-  <input type="email" name="email" required placeholder="Your Email">
-  <textarea name="message" required placeholder="Message"></textarea>
+    <!-- Inputs -->
+    <input type="text" name="name" required placeholder="Your Name"
+      class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none">
 
-  <button type="submit">Send</button>
+    <input type="email" name="email" required placeholder="Your Email"
+      class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none">
 
-</form>
+    <textarea name="message" required placeholder="Message" rows="5"
+      class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none"></textarea>
+
+    <button type="submit"
+      class="w-full bg-blue-500 py-3 rounded-xl hover:bg-blue-600 transition">
+      Send Message
+    </button>
+
+  </form>
 
   <!-- Back -->
   <div class="text-center mt-6">
