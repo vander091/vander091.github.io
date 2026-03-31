@@ -258,30 +258,43 @@ window.addEventListener('load', () => {
   activate();
   window.addEventListener('scroll', activate);
 });
-</script>
-
-  <script id="counter_script">
+<script>
 const counters = document.querySelectorAll('.counter');
+let started = false;
 
-counters.forEach(counter => {
-  counter.innerText = '0';
+function runCounters() {
+  if (started) return;
 
-  const updateCounter = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
+  const trigger = document.querySelector('.counter').getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
 
-    const increment = target / 100;
+  if (trigger < screenHeight - 100) {
+    started = true;
 
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCounter, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
+    counters.forEach(counter => {
+      counter.innerText = '0';
 
-  updateCounter();
-});
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        const increment = target / 80;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCounter, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCounter();
+    });
+  }
+}
+
+window.addEventListener('scroll', runCounters);
+window.addEventListener('load', runCounters);
 </script>
 
 </body>
