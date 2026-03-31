@@ -259,45 +259,66 @@ window.addEventListener('load', () => {
   window.addEventListener('scroll', activate);
 });
 <script>
-const counters = document.querySelectorAll('.counter');
-let started = false;
+window.addEventListener('load', () => {
 
-function runCounters() {
-  if (started) return;
+  // ===== REVEAL =====
+  const reveals = document.querySelectorAll('.reveal');
 
-  const firstCounter = document.querySelector('.counter');
-  if (!firstCounter) return; // جلوگیری crash
+  function activateReveal() {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      const height = window.innerHeight;
 
-  const trigger = firstCounter.getBoundingClientRect().top;
-  const screenHeight = window.innerHeight;
-
-  if (trigger < screenHeight - 100) {
-    started = true;
-
-    counters.forEach(counter => {
-      counter.innerText = '0';
-
-      const updateCounter = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-
-        const increment = target / 80;
-
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCounter, 20);
-        } else {
-          counter.innerText = target;
-        }
-      };
-
-      updateCounter();
+      if (top < height - 100) {
+        el.classList.add('active');
+      }
     });
   }
-}
 
-window.addEventListener('scroll', runCounters);
-window.addEventListener('load', runCounters);
+  window.addEventListener('scroll', activateReveal);
+  activateReveal();
+
+
+  // ===== COUNTER =====
+  const counters = document.querySelectorAll('.counter');
+  let started = false;
+
+  function runCounters() {
+    if (started) return;
+    if (!counters.length) return;
+
+    const trigger = counters[0].getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (trigger < screenHeight - 100) {
+      started = true;
+
+      counters.forEach(counter => {
+        counter.innerText = '0';
+
+        const target = +counter.getAttribute('data-target');
+
+        const updateCounter = () => {
+          const count = +counter.innerText;
+          const increment = target / 80;
+
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCounter, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCounter();
+      });
+    }
+  }
+
+  window.addEventListener('scroll', runCounters);
+  runCounters();
+
+});
 </script>
 
 </body>
